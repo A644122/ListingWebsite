@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import logo from "../assets/LogoLb.png";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -10,7 +10,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="text-xl font-bold text-blue-600">
-          <Link to="/">MyLogo</Link>
+          <img className="w-[170px]" src={logo} alt="" />
         </div>
 
         {/* Desktop Navbar */}
@@ -22,11 +22,11 @@ const Header = () => {
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
+            onMouseLeave={() => setServicesOpen()}
           >
             <button className="hover:text-blue-600">Services ▾</button>
             {servicesOpen && (
-              <div className="absolute top-full left-0 bg-white border rounded shadow-md mt-2">
+              <div className="absolute top-full left-0  border rounded  bg-black shadow-md mt-2 mr-22">
                 <Link
                   to="Pages/services/DigitalMarketing"
                   className="block px-4 py-2 hover:bg-gray-100"
