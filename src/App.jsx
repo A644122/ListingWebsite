@@ -2,13 +2,15 @@ import React from "react";
 import AllLinks from "./Components/AllLinks";
 
 import Header from "./Components/Header";
-import Homesection from "./Components/Homesection";
+
+// import HeroSection from "./Components/HeroSection";
 const App = () => {
   return (
     <>
-      <Header />
+      <div className="">
+        <Header />
       <AllLinks />
-      <Homesection />
+      </div>
     </>
   );
 };
